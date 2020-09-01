@@ -1,0 +1,23 @@
+#home {
+    /* home 박스에 백그라운드 이미지 지정, 반응형 세팅 */
+    background: url("../imgs/home/bgImg.png") center/cover no-repeat;
+    padding: 40px;
+    padding-top: 120px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 300px;
+    height: 250px;
+    border-radius: 50%;
+    border: 10px solid var(--color-light-white);
+}
+
+.home__contect {
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: solid var(--color-light-grey);
+    border-radius: var(--size-border-radius);
+}
