@@ -1,0 +1,53 @@
+.about__majors {
+    display: flex;
+    justify-content: space-between;
+}
+
+.about__major {
+    margin: 80px 0px;
+}
+
+.about__major__icon {
+    width: 170px;
+    height: 170px;
+    line-height: 170px;
+    /* 높이 만큼 지정하면 한 줄인 경우 수직으로 가운데 정렬이 가능 */
+    font-size: 70px;
+    /* 아이콘도 결국 폰트 이므로 폰트 사이즈를 이용하여 크기 조절 */
+    /* 지정된 요소들이 오른쪽 마진때문에 가운데 정렬이 되지 않아서 넣음*/
+    /* margin: auto; */
+    border: 1px solid var(--color-light-grey);
+    border-radius: 50%;
+    margin-bottom: 16px;
+    color: var(--color-grey);
+}
+
+/* .major__icon:hover : transform 효과가 아이콘 전체에 나타남 */
+/* .major__icon i:hover : transform 효과가 major_icon 안에 i(동그마리 안 텍스트)에만 적용 */
+/* .major__icon:hover i: major_icon에 마우스를 대었을 때 안에 i만 스타일이 적용*/
+
+.about__major__icon i {
+    transition: all var(--animation-duration) ease;
+}
+
+.about__major__icon:hover i {
+    color: var(--color-blue);
+    transform: rotate(-30deg) scale(1.2);
+}
+
+
+
+.about__job {
+    display: flex;
+    align-items: center;
+}
+
+.fa-building {
+    font-size: var(--font-large);
+    margin-right: 10px;
+}
+
+.job__description {
+    margin: 0px 16px;
+    text-align: left;
+}
