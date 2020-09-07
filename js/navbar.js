@@ -7,10 +7,11 @@ export default class Navbar {
         this.navbarLogo = document.querySelector('.navbar__logo');
         this.navbarMenuItems = document.querySelectorAll('.navbar__menu__item');
         this.navbarMenu = document.querySelector('.navbar__menu');
+        this.navHeight = this.navbar.getBoundingClientRect().height;
     }
 
     getHeight() {
-        return this.navbar.getBoundingClientRect().height;
+        return this.navHeight;
     }
 
     darkNavbar() {

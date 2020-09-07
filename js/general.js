@@ -1,7 +1,10 @@
 'use strict';
 
 import Navbar from '../js/navbar.js';
+import Home from '../js/home.js';
 
+
+// navbar
 const nav = new Navbar();
 
 document.addEventListener('scroll', () => {
@@ -16,7 +19,6 @@ document.addEventListener('scroll', () => {
     }
 });
 
-
 nav.navbarMenu.addEventListener('click', (event) => {
 
     const target = event.target;
@@ -28,6 +30,41 @@ nav.navbarMenu.addEventListener('click', (event) => {
 
     scrollIntoView(link);
 });
+
+
+
+// home
+const home = new Home();
+
+home.homeContect.addEventListener('click', () => {
+    scrollIntoView('#contect');
+});
+
+/*
+        homeHeight = 800, 고정
+        window.scrollY = 0 ~ inf, 가변
+        opacity = 0 ~ 1, 투명도
+
+        opacity : scrollY : homeHeight
+        1   : 0     : 800 -> 800 / 800 -> scrollY = homeHeight - scrollY
+        0.5 : 400   : 800 -> 400 / 800 -> 
+        0   : 800   : 800 ->  0  / 800 -> 
+    */
+
+/*
+    home.style.opacity = 1 - (window.scrollY) / (homeHeight);
+*/
+
+document.addEventListener('scroll', () => {
+    const op = ((home.getHeight()) - (window.scrollY)) / (home.getHeight());
+    home.homeContainer.style.opacity = op;
+});
+
+
+
+
+
+
 
 
 
