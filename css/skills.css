@@ -6,6 +6,11 @@
     margin-top: 52px;
 }
 
+.skills__title,
+.skills__description {
+    color: var(--color-black);
+}
+
 .skills__description {
     margin-bottom: 45px;
 }
@@ -13,6 +18,11 @@
 .skills__set {
     display: flex;
     justify-content: space-between;
+}
+
+.skill__set__description,
+.skills__set__frameworks,
+.skills__set__tools {
     color: var(--color-white);
 }
 
@@ -21,6 +31,8 @@
     background-color: var(--color-grey);
     padding: 20px 40px;
 }
+
+
 
 .skill__set__description {
     display: flex;

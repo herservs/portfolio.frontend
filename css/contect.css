@@ -1,0 +1,31 @@
+#contect {
+    background-color: var(--color-light-grey);
+    /* navbar 배경색 지정*/
+}
+
+.contect__title {
+    margin: 32px 0;
+}
+
+
+h1.contect__title,
+h2.contect__email {
+    color: var(--color-white);
+}
+
+.contect__links a,
+.contect__links p {
+    color: var(--color-white);
+}
+
+.contect__links {
+    font-size: var(--font-large);
+    margin: 24px 0;
+}
+
+/* contect__links 안에 있는 i 태그에 마우스가 가져다대면 */
+.contect__links i:hover {
+    color: var(--color-blue);
+    transform: scale(1.1);
+    transition: all var(--animation-duration) ease-in;
+}
