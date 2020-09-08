@@ -1,10 +1,13 @@
 'use strict';
 
+
 import Navbar from '../js/navbar.js';
 import Home from '../js/home.js';
+import Work from '../js/work.js';
 
 
-// navbar
+
+////////////////////// navbar //////////////////////
 const nav = new Navbar();
 
 document.addEventListener('scroll', () => {
@@ -33,7 +36,12 @@ nav.navbarMenu.addEventListener('click', (event) => {
 
 
 
-// home
+
+
+
+
+////////////////////// home //////////////////////
+
 const home = new Home();
 
 home.homeContect.addEventListener('click', () => {
@@ -62,6 +70,27 @@ document.addEventListener('scroll', () => {
 
 
 
+////////////////////// work //////////////////////
+
+const work = new Work();
+
+work.workCategories.addEventListener('click', (e) => {
+
+    const filter = work.getFilter(e);
+    if (filter == null) {
+        return;
+    }
+
+    work.removeActiveBtn();
+    work.addActiveBtn(e);
+
+    work.changeProject(e);
+
+
+
+
+
+});
 
 
 
@@ -71,6 +100,10 @@ document.addEventListener('scroll', () => {
 
 
 
+
+
+
+////////////////////// common //////////////////////
 
 function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
