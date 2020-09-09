@@ -1,0 +1,8 @@
+@media screen and (max-width: 768px) {
+
+    .project {
+        flex-grow: 1;
+        /* 화면이 작아졌을 때 여백을 알아서 채워주는 기능 */
+    }
+
+}

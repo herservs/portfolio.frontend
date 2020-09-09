@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) {
+
+    #navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar__toggle-btn {
+        display: block;
+        margin-right: 20px;
+    }
+
+    #navbar.open {
+        flex-direction: column;
+        align-items: flex-start;
+        background-color: var(--color-light-grey);
+        color: var(--color-light-white);
+    }
+
+    #navbar.open a {
+        color: var(--color-light-white);
+        /* 텍스트 색 흰색으로 변경 */
+    }
+
+    .navbar__menu {
+        flex-direction: column;
+        text-align: center;
+        width: 100%;
+        display: none;
+    }
+
+    .navbar__menu.open {
+        background-color: var(--color-light-grey);
+        display: block;
+        color: var(--color-light-white);
+    }
+
+    #navbar.navbar--dark {
+        align-items: baseline;
+        padding-top: 15px;
+    }
+
+
+
+}

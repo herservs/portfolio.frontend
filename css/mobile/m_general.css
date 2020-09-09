@@ -1,0 +1,30 @@
+@media screen and (max-width: 768px) {
+
+    :root {
+        /* Font size */
+        --font-large: 30px;
+        --font-medium: 18px;
+        --font-regular: 16px;
+        --font-small: 14x;
+        --font-micro: 12px;
+    }
+
+    .section {
+        padding: 16px;
+        padding-top: 45px;
+    }
+
+    .section__container {
+        max-width: 1200px;
+        text-align: center;
+        padding: 10px;
+        padding-top: 6px;
+        margin: auto;
+    }
+
+
+
+
+
+
+}

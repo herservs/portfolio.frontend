@@ -20,6 +20,8 @@ document.addEventListener('scroll', () => {
     } else {
         nav.whiteNavbar();
     }
+
+    nav.closeNavbar();
 });
 
 nav.navbarMenu.addEventListener('click', (event) => {
@@ -30,8 +32,17 @@ nav.navbarMenu.addEventListener('click', (event) => {
     if (link == null) {
         return;
     }
+    nav.closeNavbarMenu();
+
+    if (link === '#home') {
+        nav.closeNavbar();
+    }
 
     scrollIntoView(link);
+});
+
+nav.navbarToggleBtn.addEventListener('click', () => {
+    nav.toggleNavbarBtn();
 });
 
 
@@ -83,7 +94,6 @@ work.workCategories.addEventListener('click', (e) => {
 
     work.removeActiveBtn();
     work.addActiveBtn(e);
-
     work.changeProject(e);
 
 
