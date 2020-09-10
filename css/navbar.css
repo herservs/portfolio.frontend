@@ -61,3 +61,11 @@
     right: 32px;
     display: none;
 }
+
+.navbar__logo a {
+    color: var(--color-dark-grey);
+}
+
+.navbarLogo--dark a {
+    color: var(--color-light-white);
+}

@@ -4,6 +4,7 @@
 import Navbar from '../js/navbar.js';
 import Home from '../js/home.js';
 import Work from '../js/work.js';
+import About from '../js/about.js';
 
 
 
@@ -44,9 +45,6 @@ nav.navbarMenu.addEventListener('click', (event) => {
 nav.navbarToggleBtn.addEventListener('click', () => {
     nav.toggleNavbarBtn();
 });
-
-
-
 
 
 
@@ -97,13 +95,19 @@ work.workCategories.addEventListener('click', (e) => {
     work.changeProject(e);
 
 
-
-
-
 });
 
 
 
+////////////////////// about //////////////////////
+
+const about = new About();
+
+about.aboutMajors.addEventListener('click', (e) => {
+    if (e.target.matches('.about__major__icon') || e.target.matches('.fas')) {
+        scrollIntoView('#work');
+    }
+});
 
 
 
